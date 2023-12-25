@@ -2,6 +2,19 @@ import { Request, Response } from "express";
 import ToDo, { ToDoDocument } from "../models/todo-model";
 import User from "../models/user-model";
 
+export const getAllToDos = async (
+  req: Request,
+  res: Response
+): Promise<void> => {
+  try {
+    const userId = req.params.userId;
+    const todos: ToDoDocument[] = await ToDo.find({ userId });
+    res.status(200).json(todos);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+}
+
 export const getToDoById = async (
   req: Request,
   res: Response
