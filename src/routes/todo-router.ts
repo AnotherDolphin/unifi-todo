@@ -3,6 +3,9 @@ import * as todoController from '../controllers/todo-controller';
 
 const router = express.Router();
 
+// GET all todos for a specific user
+router.get('/:userId', todoController.getAllToDos);
+
 // GET a specific todo by ID for a user
 router.get('/:userId/:todoId', todoController.getToDoById);
 
