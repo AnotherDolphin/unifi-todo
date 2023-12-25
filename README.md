@@ -78,4 +78,13 @@ Deletes a specific todo item for a given user.
   - `todoId` (required): The ID of the todo item.
 - **Response:** A success message indicating the deletion.
 
+### Get all todos for a user (available only in func5 branch)
+
+Retrieves all todo items for a given user.
+
+- **URL:** `/api/todos/:userId`
+- **Method:** GET
+- **Parameters:**
+  - `userId` (required): The ID of the user.
+- **Response:** The JSON representation of the todo items.
 
