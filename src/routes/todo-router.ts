@@ -1,4 +1,3 @@
-// src/routes/todoRouter.ts
 import express from 'express';
 import * as todoController from '../controllers/todo-controller';
 

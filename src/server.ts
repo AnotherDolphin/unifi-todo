@@ -15,6 +15,10 @@ app.use(express.json());
 
 app.use('/todos', todoRouter)
 
+app.get("/", (req, res) => {
+  res.send("Todo Todo!");
+});
+
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
